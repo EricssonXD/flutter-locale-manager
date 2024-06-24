@@ -38,7 +38,18 @@
           "description": "The relative path of the directory to generate the file in, you must enable the useCustomOutputDirectory setting to use this setting"
         }
       }
-    }
+    },
+    "customEditors": [
+      {
+        "viewType": "flutter-locale-manager.editor",
+        "displayName": "Flutter Locale Manager",
+        "selector": [
+          {
+            "filenamePattern": "*.csv.flm"
+          }
+        ]
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run package",

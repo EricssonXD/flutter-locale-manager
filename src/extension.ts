@@ -2,6 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import { getMainWebview } from './view/manager_main';
+import { FlutterLocaleEditorProvider } from './providers/flutterLocaleEditor';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -29,6 +30,9 @@ export function activate(context: vscode.ExtensionContext) {
 
 		vscode.window.showInformationMessage('Opened Flutter Locale Manager!');
 	});
+
+	context.subscriptions.push(FlutterLocaleEditorProvider.register(context));
+
 
 	context.subscriptions.push(disposable, d2);
 }
